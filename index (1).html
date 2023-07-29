@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Conferencing</title>
+  <style>
+ /* Add some basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#videoContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+video {
+  width: 45%;
+  max-height: 300px;
+  border: 1px solid #ccc;
+}
+
+#chatContainer {
+  margin-bottom: 20px;
+}
+
+#messageBox {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#chatForm {
+  display: flex;
+}
+
+#messageInput {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+#controlsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+  </style>
+</head>
+<body>
+  <div id="videoContainer">
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+  </div>
+
+  <div id="chatContainer">
+    <div id="messageBox"></div>
+    <form id="chatForm">
+      <input type="text" id="messageInput" placeholder="Type your message...">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div id="controlsContainer">
+    <button id="startCallBtn" disabled>Start Call</button>
+    <button id="endCallBtn" disabled>End Call</button>
+    <button id="recordBtn" disabled>Record</button>
+  </div>
+
+  <script>
+    const localVideo = document.getElementById("localVideo");
+    const remoteVideo = document.getElementById("remoteVideo");
+    const messageBox = document.getElementById("messageBox");
+    const chatForm = document.getElementById("chatForm");
+    const messageInput = document.getElementById("messageInput");
+    const startCallBtn = document.getElementById("startCallBtn");
+    const endCallBtn = document.getElementById("endCallBtn");
+    const recordBtn = document.getElementById("recordBtn");
+    
+    </script>
+</body>
+</html>
+
